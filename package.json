@@ -1,0 +1,36 @@
+{
+  "name": "mern-transaction-starter",
+  "version": "1.0.0",
+  "description": "A small fullstack MERN application bolierplate with MongoDB Transactions in mind",
+  "private": true,
+  "scripts": {
+    "lerna:init": "lerna init",
+    "build:client": "lerna exec --scope client -- yarn build",
+    "start": "lerna exec -- yarn start",
+    "start:server": "lerna exec --scope server -- yarn start",
+    "start:client": "lerna exec --scope client -- yarn start",
+    "purge": "lerna exec -- rm -rf ./node_modules",
+    "db": "run-rs -v 4.0.4 --keep",
+    "db:d": "run-rs --mongod --keep"
+  },
+  "engines": {
+    "node": "^10",
+    "yarn": "^1.16.0"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "keywords": [
+    "mern",
+    "mongo transactions"
+  ],
+  "author": "Soumyajit Pathak",
+  "license": "MIT",
+  "devDependencies": {
+    "lerna": "^3.15.0",
+    "run-rs": "^0.5.2",
+    "yarn": "^1.16.0"
+  },
+  "main": "index.js",
+  "repository": "https://github.com/drenther/mern-transaction-starter"
+}
